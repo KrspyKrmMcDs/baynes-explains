@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Post
+class BlogAdmin(admin.ModelAdmin):
+    fields = ['title', 'content']
+
+admin.site.register(Post, BlogAdmin)

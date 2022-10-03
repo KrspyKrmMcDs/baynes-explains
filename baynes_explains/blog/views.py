@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from .models import Post
 
+
 def home(request):
     context = {
-        'posts' : Post.objects.all()
+        'posts': Post.objects.all()
     }
-    return render(request, 'home.html')
+    return render(request, 'blog/home.html', context=context)
+
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'blog/about.html')
