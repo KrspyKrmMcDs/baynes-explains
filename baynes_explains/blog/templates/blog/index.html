@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/style.css' %}">
+
+<div id="index_container" class="container-fluid">
+    <div class="row text-center">
+        <p class="fs-1 fw-bold font-monospace">BAYNES EXPLAINS</p>
+    </div>
+    <div class="row align-items-center">
+
+        <div class="col-6 text-center">
+            <div class="card text-white m-5 bg-info">
+                <img class="card-img-top p-3" src="{% static 'blog/Pandas.png' %}" alt="Title">
+                <div class="card-body">
+                    <h4 class="card-title font-monospace fs-1 fw-bold">Pandas</h4>
+                    <a href="{% url 'blog-list' %}" class="card-text stretched-link font-monospace text-dark fs-2">Learn Data Science
+                        and ETL Processes with me!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 text-center">
+            <div class="card text-white m-5 bg-info">
+                <img class="card-img-top p-3" src="{% static 'blog/claymation_python_working.png' %}" alt="Title">
+                <div class="card-body">
+                    <h4 class="card-title font-monospace text-dark fs-1 fw-bold">Django</h4>
+                    <a href="#" class="card-text stretched-link font-monospace text-dark fs-2">Build Websites Fast!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endblock content %}

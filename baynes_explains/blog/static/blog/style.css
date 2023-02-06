@@ -1,0 +1,6 @@
+.card-img-top {
+    width: 40%;
+    height: 25vw;
+    object-fit: contain;
+    border-radius: 25px;
+}

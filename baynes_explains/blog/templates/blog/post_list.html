@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/style.css' %}">
+<div id='gradient_bg_img'>
+    {% for post in object_list %}
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+            <div class="card m-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">{{post.content | truncatechars:100}}</p>
+                    {% bootstrap_button button_type="submit" content='Go!' %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
